@@ -1,0 +1,63 @@
+// Write a function to replace vowels with numbers
+// Get practice with strings
+// Get practice with command line
+// Get practice with switch
+
+#include <cs50.h>
+#include <stdio.h>
+#include <string.h>
+
+string reblace(string vowels);
+
+int main(int argc, string argv[])
+{
+
+    if(argc == 2)
+    {
+        printf("%s\n",reblace(argv[1]));
+        printf("\n");
+    }
+    else
+    {
+        printf("Usage: ");
+    }
+
+
+}
+string reblace(string vowels)
+{
+    for(int i = 0;  i < strlen(vowels) ; i++)
+    {
+        // if(vowels[i] == 'a')
+        // {
+        //     vowels[i] = '6';
+        // }
+        // else if(vowels[i] == 'e')
+        // {
+        //     vowels[i] = '3';
+        // }
+      switch (vowels[i])
+        {
+            case 'a':
+                vowels[i] = '6';
+                break;
+
+            case 'e':
+                vowels[i] = '3';
+                break;
+
+            case 'o':
+                vowels[i] = '0';
+                break;
+
+            case 'i':
+                vowels[i] = '1';
+                break;
+            default:
+                vowels[i] = vowels[i];
+                break;
+        }
+
+    }
+    return vowels ;
+}
